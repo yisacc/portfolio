@@ -1,7 +1,16 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter,Oxygen,Oxygen_Mono } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const inter = Inter({ subsets: ['latin'],display:'swap',variable:'--font-oxygen' })
+
+const oxygen= Oxygen({
+  subsets: ['latin'],
+  weight:'400',
+  display:'swap',
+  variable:'--font-oxygen'
+})
+const oxygen_mono=Oxygen_Mono({subsets: ['latin'],weight:'400', display:'swap', variable:'--font-oxygen-mono'})
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +23,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='box-border'>
+      <head></head>
+      <body className={`${inter.variable} ${oxygen.variable} ${oxygen_mono.variable}`}>{children}</body>
     </html>
   )
 }
