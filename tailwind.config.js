@@ -19,6 +19,7 @@ module.exports = {
       fontSize: {
         normal: "1.3rem",
         headingTwo: "4rem",
+        customSize: "80%",
       },
       fontFamily: {
         sans: ["var(--font-oxygen)"],
