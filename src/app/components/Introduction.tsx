@@ -1,6 +1,9 @@
 const Introduction = () => {
   return (
-    <section id="intro" className="pb-40">
+    <section
+      id="intro"
+      className="pt-16 px-4 pb-40 max-w-[1200px] my-0 mx-auto md:w-full"
+    >
       <p className="text-base font-mono leading-20">
         Hi, my name is
         <span className="font-sans text-headingTwo leading-normal text-aqua block font-light">
