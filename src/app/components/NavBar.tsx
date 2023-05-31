@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavBar = () => {
   return (
-    <nav className="font-mono text-customSize p-4">
-      <ul className="list-none p-0 m-0 flex flex-nowrap justify-center items-center gap-8">
-        <li className="basis-full text-center">
-          <h1 className="text-bold text-2xl">
+    <nav className="font-mono text-customSize p-4 md:max-w-[1200px] md:my-0 md:mx-auto md:w-full">
+      <ul className="list-none p-0 m-0 flex flex-wrap flex-row justify-center items-center gap-8">
+        <li className="basis-full text-center md:basis-auto md:text-left md:mr-auto">
+          <h1 className="text-bold text-3xl">
             <a
               className="font-sans text-white no-underline block hover:text-magneta"
               href="/"
@@ -76,7 +76,7 @@ const NavBar = () => {
         <li>
           <h1>
             <a
-              className="text-white no-underline block hover:text-magneta"
+              className="text-white no-underline block hover:text-white bg-magneta p-2 rounded hover:bg-hotmag"
               href="/"
               target="_blank"
             >
