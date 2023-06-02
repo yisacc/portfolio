@@ -5,8 +5,10 @@ const Contact = () => {
         id="contact"
         className="w-[400px] text-center mx-auto my-0 px-auto py-16 "
       >
-        <h2 className="block text-3xl text-bold font-sans">Contact me</h2>
-        <p>
+        <h2 className="text-3xl font-bold font-sans leading-normal pb-4">
+          Contact me
+        </h2>
+        <p className="leading-normal">
           I&apos;m always interested in hearing about new technologies, updates,
           job opportunities.
         </p>
