@@ -25,6 +25,12 @@ module.exports = {
         sans: ["var(--font-oxygen)"],
         mono: ["var(--font-oxygen-mono)"],
       },
+      screens: {
+        sm: "550px",
+      },
+      gridColumn: {
+        "span-1/6": "span 1 / span 6",
+      },
     },
   },
   plugins: [],
