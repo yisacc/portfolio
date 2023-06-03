@@ -3,7 +3,7 @@ const Contact = () => {
     <div className="bg-plum">
       <section
         id="contact"
-        className="w-[400px] text-center mx-auto my-0 px-auto py-16 "
+        className="max-w-[400px] text-center mx-auto my-0 px-auto py-16 "
       >
         <h2 className="text-3xl font-bold font-sans leading-normal pb-4">
           Contact me

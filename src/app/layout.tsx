@@ -1,3 +1,5 @@
+import NavBar from './components/NavBar'
+import Footer from './components/footer'
 import './globals.css'
 import { Inter,Oxygen,Oxygen_Mono } from 'next/font/google'
 
@@ -24,9 +26,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='box-border'>
+    <html lang="en" className="box-border">
       <head></head>
-      <body className={`${inter.variable} ${oxygen.variable} ${oxygen_mono.variable}`}>{children}</body>
+      <body
+        className={`${inter.variable} ${oxygen.variable} ${oxygen_mono.variable}`}
+      >
+        <main className="flex min-h-screen flex-col justify-between">
+          <NavBar />
+          {children}
+          <div className="bg-gradient-to-r from-magneta to-aqua h-[2px]"></div>
+          <Footer />
+        </main>
+      </body>
     </html>
-  )
+  );
 }

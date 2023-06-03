@@ -25,6 +25,16 @@ const NavBar = () => {
           <h1>
             <a
               className="text-white no-underline block hover:text-magneta"
+              href="#projects"
+            >
+              Projects
+            </a>
+          </h1>
+        </li>
+        <li>
+          <h1>
+            <a
+              className="text-white no-underline block hover:text-magneta"
               href="/about"
             >
               About
