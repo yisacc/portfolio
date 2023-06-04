@@ -74,7 +74,7 @@ const Projects = () => {
           </div>
 
           <Image
-            className="mt-8 mx-0 mb-16 border-l border-aqua border-solid border-t rounded-3xl p-4 sm:col-start-6 sm:col-end-11 sm:row-start-1 sm:row-end-2"
+            className="mt-8 mx-0 mb-16 border-l border-aqua border-solid border-t rounded-3xl p-4 sm:col-start-6 sm:col-end-11 sm:row-start-1 sm:row-end-2 max-h-[358px]"
             width={584}
             height={358}
             src={assemblyConnectPic}
