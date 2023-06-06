@@ -31,7 +31,7 @@ const NavBar = () => {
             </a>
           </h1>
         </li>
-        <li>
+        {/* <li>
           <h1>
             <a
               className="text-white no-underline block hover:text-magneta"
@@ -40,7 +40,7 @@ const NavBar = () => {
               About
             </a>
           </h1>
-        </li>
+        </li> */}
         <li>
           <h1>
             <a

@@ -40,7 +40,7 @@ export default async function About() {
             </div>
 
             <Image
-              className="mt-8 mx-0 mb-16 border-l border-aqua border-solid border-t rounded-3xl p-4 sm:col-start-1 sm:col-end-6 sm:row-start-1 sm:row-end-2"
+              className="mt-8 mx-0 mb-16 border-l border-aqua border-solid border-t rounded-3xl p-4 sm:col-start-1 sm:col-end-6 sm:row-start-1 sm:row-end-2 "
               width={584}
               height={358}
               src={yisaccPic}
