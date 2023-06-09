@@ -1,13 +1,10 @@
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
-import { config } from "@fortawesome/fontawesome-svg-core";
 
 import Introduction from "./components/Introduction";
 import Contact from "./components/Contact";
 
 import Projects from "./components/projects";
 
-config.autoAddCss = false;
 export default function Home() {
   return (
     <>

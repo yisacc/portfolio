@@ -1,18 +1,31 @@
-import NavBar from './components/NavBar'
-import Footer from './components/footer'
-import './globals.css'
-import { Inter,Oxygen,Oxygen_Mono } from 'next/font/google'
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
+import { config } from "@fortawesome/fontawesome-svg-core";
+import NavBar from "./components/NavBar";
+import Footer from "./components/footer";
+import "./globals.css";
+import { Inter, Oxygen, Oxygen_Mono } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'],display:'swap',variable:'--font-oxygen' })
+config.autoAddCss = false;
 
-const oxygen= Oxygen({
-  subsets: ['latin'],
-  weight:'400',
-  display:'swap',
-  variable:'--font-oxygen'
-})
-const oxygen_mono=Oxygen_Mono({subsets: ['latin'],weight:'400', display:'swap', variable:'--font-oxygen-mono'})
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-oxygen",
+});
+
+const oxygen = Oxygen({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-oxygen",
+});
+const oxygen_mono = Oxygen_Mono({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-oxygen-mono",
+});
 
 export const metadata = {
   title: "Yisacc Aberham's Portfolio website",
@@ -23,7 +36,7 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="box-border">
