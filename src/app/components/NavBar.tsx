@@ -103,7 +103,7 @@ const NavBar = () => {
           <h1>
             <Link
               className="text-white no-underline block hover:text-white bg-magneta p-2 rounded hover:bg-hotmag"
-              href="/"
+              href="https://www.notion.so/Yisacc-Aberham-762d1a831c84460285f5d4bfa7025f07?pvs=4"
               target="_blank"
             >
               Resume
