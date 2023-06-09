@@ -9,8 +9,8 @@ const Contact = () => {
           Contact me
         </h2>
         <p className="leading-normal">
-          I&apos;m always interested in hearing about new technologies, updates,
-          job opportunities.
+          I&apos;m always interested in hearing about new technologies, updates
+          and job opportunities.
         </p>
         <p className="mt-12">
           <a

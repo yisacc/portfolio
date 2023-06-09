@@ -20,7 +20,11 @@ const Introduction = () => {
 
       <p className="text-base leading-10">
         Currently, I&apos;m working on personal startup( Hi-Trust Tutor) &
-        front-end mentor.
+        I&apos;m front-end mentor at{" "}
+        <a href="https://africaagility.org/" target="_blank">
+          Africa Agility
+        </a>
+        .
       </p>
     </section>
   );
