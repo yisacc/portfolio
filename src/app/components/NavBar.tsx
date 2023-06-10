@@ -1,22 +1,10 @@
-"use client";
-
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import ScrollLink from "./ScrollLink";
+import { externalLinks, navLinks } from "@/lib/links";
 
 const NavBar = () => {
-  const router = useRouter();
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    router.push("/#" + targetId);
-  };
-
   return (
     <nav className="font-mono text-customSize py-16 px-4 md:max-w-[1200px] md:my-0 md:mx-auto md:w-full">
       <ul className="list-none p-0 m-0 flex flex-wrap flex-row justify-center items-center gap-8">
@@ -35,81 +23,53 @@ const NavBar = () => {
             </Link>
           </h1>
         </li>
-        <li>
-          <h1>
-            <Link
-              className="text-white no-underline block hover:text-magneta"
-              href="#projects"
-              onClick={scrollToSection}
-            >
-              Projects
-            </Link>
-          </h1>
-        </li>
-        <li>
-          <h1>
-            <Link
-              className="text-white no-underline block hover:text-magneta"
-              href="/about"
-            >
-              About
-            </Link>
-          </h1>
-        </li>
-        <li>
-          <h1>
-            <Link
-              className="text-white no-underline block hover:text-magneta"
-              href="#contact"
-              onClick={scrollToSection}
-            >
-              Contact
-            </Link>
-          </h1>
-        </li>
-        <li>
-          <h1>
-            <Link
-              className="text-white no-underline block hover:text-magneta"
-              href="https://www.linkedin.com/in/yisacc-aberham-7ba6221b0/"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                aria-hidden="true"
-                className="text-[150%] text-aqua hover:text-magneta"
-              />
-              <span className="sr-only">Linkedin</span>
-            </Link>
-          </h1>
-        </li>
-        <li>
-          <h1>
-            <Link
-              className="text-white no-underline block hover:text-magneta"
-              href="https://github.com/yisacc"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                className="text-[150%] text-aqua hover:text-magneta"
-                aria-hidden="true"
-                icon={faGithub}
-              />
-              <span className="sr-only">Github</span>
-            </Link>
-          </h1>
-        </li>
-        <li>
-          <h1>
-            <Link
-              className="text-white no-underline block hover:text-white bg-magneta p-2 rounded hover:bg-hotmag"
-              href="https://www.notion.so/Yisacc-Aberham-762d1a831c84460285f5d4bfa7025f07?pvs=4"
-              target="_blank"
-            >
-              Resume
-            </Link>
-          </h1>
-        </li>
+        {navLinks.map((link, index) => (
+          <li key={index}>
+            <h1>
+              {link.href.startsWith("#") ? (
+                <ScrollLink
+                  className="text-white no-underline block hover:text-magneta"
+                  href={link.href}
+                >
+                  {link.label}
+                </ScrollLink>
+              ) : (
+                <Link
+                  className="text-white no-underline block hover:text-magneta"
+                  href={link.href}
+                >
+                  {link.label}
+                </Link>
+              )}
+            </h1>
+          </li>
+        ))}
+        {externalLinks.map((link, index) => (
+          <li key={index}>
+            <h1>
+              <Link
+                href={link.href}
+                target="_blank"
+                className={`text-white no-underline block hover:text-magneta ${
+                  link.className || ""
+                }`}
+              >
+                {link?.icon ? (
+                  <>
+                    <FontAwesomeIcon
+                      icon={link.icon}
+                      className="text-[150%] text-aqua hover:text-magneta"
+                      aria-hidden="true"
+                    />
+                    <span className="sr-only">{link.label}</span>
+                  </>
+                ) : (
+                  <>{link.label}</>
+                )}
+              </Link>
+            </h1>
+          </li>
+        ))}
       </ul>
     </nav>
   );
