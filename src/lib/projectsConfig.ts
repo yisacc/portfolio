@@ -3,6 +3,18 @@ import assemblyConnectPic from "../../public/assembly connect.png";
 import fusionPic from "../../public/fusion.png";
 import { StaticImageData } from "next/image";
 
+
+export type Variants = "normal" | "inverted";
+
+const variantStyle: { [key in Variants]: string } = {
+  normal: "text-right sm:col-start-5 sm:col-end-11",
+  inverted: "text-left sm:col-start-1 sm:col-end-7",
+};
+
+const imageVariantSryle: { [key in Variants]: string } = {
+  normal: "sm:col-start-1 sm:col-end-6",
+  inverted: "sm:col-start-6 sm:col-end-11",
+};
 export interface ProjectItems {
   title: string;
   subTitle: string;
@@ -27,8 +39,8 @@ export const projects: ProjectItems[] = [
     additionally supports signing of all dHealth transactions.p`,
     technologies: ["React Native", "Typescript", "Blockchain", "CSS"],
     imageSrc: signerAppPic,
-    className: "text-right sm:col-start-5 sm:col-end-11 ",
-    imageClass: "sm:col-start-1 sm:col-end-6",
+    className: variantStyle["normal"],
+    imageClass: imageVariantSryle["normal"],
     listClass: "sm:justify-end",
   },
   {
@@ -54,8 +66,8 @@ export const projects: ProjectItems[] = [
       "Redux",
     ],
     imageSrc: assemblyConnectPic,
-    className: "text-left sm:col-start-1 sm:col-end-7 ",
-    imageClass: "sm:col-start-6 sm:col-end-11",
+    className: variantStyle["inverted"],
+    imageClass: imageVariantSryle["inverted"],
     listClass: "sm:justify-start",
   },
   {
@@ -77,8 +89,8 @@ export const projects: ProjectItems[] = [
     products.`,
     technologies: ["React", "Typescript", "Redux", ".Net", "CSS", "Azure"],
     imageSrc: fusionPic,
-    className: "text-right sm:col-start-5 sm:col-end-11 ",
-    imageClass: "sm:col-start-1 sm:col-end-6",
+    className: variantStyle["normal"],
+    imageClass: imageVariantSryle["normal"],
     listClass: "sm:justify-end",
   },
 ];

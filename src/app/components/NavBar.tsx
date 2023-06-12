@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import ScrollLink from "./ScrollLink";
 import { externalLinks, navLinks } from "@/lib/links";
+import clsx from "clsx";
 
 const NavBar = () => {
   return (
@@ -50,9 +51,10 @@ const NavBar = () => {
               <Link
                 href={link.href}
                 target="_blank"
-                className={`text-white no-underline block hover:text-magneta ${
-                  link.className || ""
-                }`}
+                className={clsx(
+                  "text-white no-underline block hover:text-magneta",
+                  link.className
+                )}
               >
                 {link?.icon ? (
                   <>
