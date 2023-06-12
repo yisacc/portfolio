@@ -1,8 +1,4 @@
-import Image from "next/image";
-import signerAppPic from "../../../public/dHealthSigner.jpg";
-import assemblyConnectPic from "../../../public/assembly connect.png";
-import fusionPic from "../../../public/fusion.png";
-import { projects } from "@/lib/projects";
+import { projects } from "@/lib/projectsConfig";
 import ProjectItem from "./ProjectItem";
 const Projects = () => {
   return (

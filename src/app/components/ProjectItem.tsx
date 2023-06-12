@@ -1,5 +1,5 @@
-import { ProjectItems } from "@/lib/projects";
-import Image, { StaticImageData } from "next/image";
+import { ProjectItems } from "@/lib/projectsConfig";
+import Image from "next/image";
 
 const ProjectItem = ({
   title,
