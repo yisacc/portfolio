@@ -16,15 +16,12 @@ export default async function About() {
                 Just the highlights
               </h3>
               <p className="bg-black p-4 rounded-lg text-base text-white leading-6 text-left">
-                I have around 4 years of professional experience in all phases
-                of the software development life cycle, including requirements
-                analysis and debugging, application design, development,
-                integration, maintenance, installation, and testing of various
-                client/server systems in accordance with enterprise standards.
-                An experienced software developer looking to contribute to the
-                development of cutting-edge solutions. Refreshed on the most
-                recent developments in full stack web development, including
-                React, Node, and.NET
+                I am a software engineer with 5 years of experience in the
+                software industry. My focus area for the past few years has been
+                front-end development with React and Next.js, utilizing
+                TypeScript. I am also skilled in back-end development with
+                Node.js and have experience using TypeScript in that context as
+                well.
               </p>
               <h4 className="font-mono text-base m-0">
                 My favorite technologies include:
@@ -36,6 +33,7 @@ export default async function About() {
                 <li>Next.js</li>
                 <li>Node</li>
                 <li>.NET</li>
+                <li>GraphQL...</li>
               </ul>
             </div>
 
