@@ -32,7 +32,7 @@ export const externalLinks: ExternalLinks[] = [
   { label: "Github", href: "https://github.com/yisacc", icon: faGithub },
   {
     label: "Resume",
-    href: "https://www.notion.so/Yisacc-Aberham-762d1a831c84460285f5d4bfa7025f07?pvs=4",
+    href: "https://fair-harpymimus-ddc.notion.site/Yisacc-Aberham-762d1a831c84460285f5d4bfa7025f07",
     className: "bg-magneta p-2 rounded hover:bg-hotmag",
   },
 ];
