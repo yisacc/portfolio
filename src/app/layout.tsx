@@ -30,7 +30,7 @@ const oxygen_mono = Oxygen_Mono({
 export const metadata = {
   title: "Yisacc Aberham's Portfolio website",
   description:
-    "Yisacc Aberham is a web developer focussed in frontend from Ethiopia with interest in music and travel and I'm always curious to learn more when it comes to new technologies and creative coding.",
+    "Yisacc Aberham is an Ethiopian frontend web developer who enjoys music and travel. I'm always eager to learn more about new technologies and creative coding.",
 };
 
 export default function RootLayout({
