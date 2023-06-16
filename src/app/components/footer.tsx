@@ -21,7 +21,7 @@ const Footer = () => {
         ))}
       </ul>
       <p>
-        <small>@copy; 2023 Yisacc Aberham. All rights reserved</small>
+        <small>&copy; 2023 Yisacc Aberham. All rights reserved</small>
       </p>
     </footer>
   );
