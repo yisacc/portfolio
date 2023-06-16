@@ -33,7 +33,7 @@ export const externalLinks: ExternalLinks[] = [
   {
     label: "Resume",
     href: "https://fair-harpymimus-ddc.notion.site/Yisacc-Aberham-762d1a831c84460285f5d4bfa7025f07",
-    className: "bg-magneta p-2 rounded hover:bg-hotmag",
+    className: "bg-magneta p-2 rounded hover:bg-hotmag hover:text-white",
   },
 ];
 export const socialLinks: SocialLinks[] = [

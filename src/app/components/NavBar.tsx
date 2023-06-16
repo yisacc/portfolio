@@ -52,7 +52,7 @@ const NavBar = () => {
                 href={link.href}
                 target="_blank"
                 className={clsx(
-                  "text-white no-underline block hover:text-magneta",
+                  "text-white no-underline block ",
                   link.className
                 )}
               >
