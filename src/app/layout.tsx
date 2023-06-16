@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/footer";
 import "./globals.css";
 import { Inter, Oxygen, Oxygen_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 config.autoAddCss = false;
 
@@ -49,6 +50,7 @@ export default function RootLayout({
           {children}
           <div className="bg-gradient-to-r from-magneta to-aqua h-[2px]"></div>
           <Footer />
+          <Analytics />
         </main>
       </body>
     </html>
