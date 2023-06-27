@@ -1,5 +1,3 @@
-// @vitest-environment happy-dom
-
 import Footer from "@/app/components/footer";
 import { render, screen, within } from "../../test/utilities";
 import { socialLinks } from "@/lib/links";

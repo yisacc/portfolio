@@ -1,5 +1,3 @@
-// @vitest-environment happy-dom
-
 import Contact from "@/app/components/Contact";
 import { render, screen } from "../../test/utilities";
 
