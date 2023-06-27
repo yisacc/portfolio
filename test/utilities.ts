@@ -1,5 +1,7 @@
 import { render as renderComponent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { NextRouter } from "next/router";
+import { vi } from "vitest";
 
 type RenderOptions = Parameters<typeof renderComponent>[1];
 
@@ -14,3 +16,4 @@ export const render = (ui: React.ReactElement, options?: RenderOptions) => {
     user,
   };
 };
+
