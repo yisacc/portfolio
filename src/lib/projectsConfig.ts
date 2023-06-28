@@ -6,12 +6,12 @@ import { StaticImageData } from "next/image";
 
 export type Variants = "normal" | "inverted";
 
-const variantStyle: { [key in Variants]: string } = {
+export const variantStyle: { [key in Variants]: string } = {
   normal: "text-right sm:col-start-5 sm:col-end-11",
   inverted: "text-left sm:col-start-1 sm:col-end-7",
 };
 
-const imageVariantSryle: { [key in Variants]: string } = {
+export const imageVariantSryle: { [key in Variants]: string } = {
   normal: "sm:col-start-1 sm:col-end-6",
   inverted: "sm:col-start-6 sm:col-end-11",
 };
