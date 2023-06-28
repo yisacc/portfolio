@@ -3,7 +3,7 @@ import {
   imageVariantSryle,
   variantStyle,
 } from "@/lib/projectsConfig";
-import { render, screen } from "../../test/utilities";
+import { getByTestId, render, screen } from "../../test/utilities";
 import ProjectItem from "@/app/components/ProjectItem";
 import signerAppPic from "/public/dHealthSigner.jpg";
 import { vi } from "vitest";
@@ -39,7 +39,20 @@ it("it should render the component", () => {
 });
 
 it("should have the correct data", () => {
-  render(<ProjectItem {...project} />);
+  const { container } = render(<ProjectItem {...project} />);
   screen.getByText(project.title);
   screen.getByText(project.subTitle);
+  expect(getByTestId(container, "project wrapper")).toHaveClass(
+    project.className
+  );
+  expect(getByTestId(container, "technologies list")).toHaveClass(
+    project.listClass
+  );
+});
+
+it("Adds correct src attribute", () => {
+  render(<ProjectItem {...project} />);
+  const img = screen.getByAltText(`Screenshot of ${project.subTitle}`);
+  console.log(signerAppPic);
+  expect(img.getAttribute("src")).toBe(signerAppPic);
 });
