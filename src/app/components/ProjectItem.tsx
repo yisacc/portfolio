@@ -14,7 +14,7 @@ const ProjectItem = ({
 }: ProjectItems) => {
   return (
     <article className="sm:grid sm:grid-cols-10 gap-4">
-      <div className={clsx("order-2 sm:row-start-1 sm:row-end-2", className)}>
+      <div data-testid="project wrapper" className={clsx("order-2 sm:row-start-1 sm:row-end-2", className)}>
         <h4>{title}</h4>
         <h3 className="text-aqua text-2xl font-bold">{subTitle}</h3>
         <p
@@ -24,7 +24,7 @@ const ProjectItem = ({
         <p hidden={true} className="sm:col-start-1 sm:col-end-7"></p>
         <p hidden={true} className="sm:col-start-6 sm:col-end-11"></p>
         <h4 className="font-mono text-base m-0">Technologies used include:</h4>
-        <ul
+        <ul data-testid="technologies list"
           className={clsx(
             "list-none p-0 m-0 flex flex-row flex-wrap justify-start gap-4 text-base",
             listClass
