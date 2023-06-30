@@ -14,6 +14,7 @@ export default defineConfig({
     globals: true,
     setupFiles: path.resolve(__dirname, "test/setup.ts"),
     environment: "happy-dom",
+    exclude: [...defaultExclude, "e2e/**", "tests-examples/**"],
     environmentMatchGlobs: [
       ["**/*.test.tsx", "happy-dom"],
       ["**/*.component.test.ts", "happy-dom"],
@@ -23,6 +24,7 @@ export default defineConfig({
       thresholdAutoUpdate: true,
       include: ["src/**/*"],
       exclude: [
+        "e2e/**",
         "test/**",
         "vite.*.ts",
         "**/*.d.ts",
