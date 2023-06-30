@@ -1,5 +1,8 @@
 import Contact from "@/app/components/Contact";
-import { render, screen } from "../../test/utilities";
+import { cleanup, render, screen } from "../../test/utilities";
+import { axe, toHaveNoViolations } from "jest-axe";
+
+expect.extend(toHaveNoViolations);
 
 it("it should render the component", () => {
   render(<Contact />);
@@ -15,4 +18,10 @@ it("should navigate accordingly", () => {
     "href",
     "mailto:isaccab2019@gmail.com"
   );
+});
+
+it("should not fail any accessblity tests", async () => {
+  const { container } = render(<Contact />);
+  const results = await axe(container);
+  expect(results).toHaveNoViolations();
 });

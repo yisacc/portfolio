@@ -7,6 +7,9 @@ import { getByTestId, render, screen } from "../../test/utilities";
 import ProjectItem from "@/app/components/ProjectItem";
 import signerAppPic from "/public/dHealthSigner.jpg";
 import { vi } from "vitest";
+import { axe, toHaveNoViolations } from "jest-axe";
+
+expect.extend(toHaveNoViolations);
 
 beforeAll(() => {
   vi.mock("next/image", () => ({
@@ -55,4 +58,10 @@ it("Adds correct src attribute", () => {
   const img = screen.getByAltText(`Screenshot of ${project.subTitle}`);
   console.log(signerAppPic);
   expect(img.getAttribute("src")).toBe(signerAppPic);
+});
+
+it("should not fail any accessblity tests", async () => {
+  const { container } = render(<ProjectItem {...project} />);
+  const results = await axe(container);
+  expect(results).toHaveNoViolations();
 });
