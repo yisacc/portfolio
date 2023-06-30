@@ -13,11 +13,11 @@ export default defineConfig({
   test: {
     globals: true,
     setupFiles: path.resolve(__dirname, "test/setup.ts"),
-    environment: "happy-dom",
+    environment: "jsdom",
     exclude: [...defaultExclude, "e2e/**", "tests-examples/**"],
     environmentMatchGlobs: [
-      ["**/*.test.tsx", "happy-dom"],
-      ["**/*.component.test.ts", "happy-dom"],
+      ["**/*.test.tsx", "jsdom"],
+      ["**/*.component.test.ts", "jsdom"],
     ],
     coverage: {
       statements: 54.92,
@@ -31,6 +31,7 @@ export default defineConfig({
         "**/*.config.*",
         "**/snapshot-tests/**",
         "**/coverage/**",
+        "test-results/**",
       ],
       all: true,
     },
