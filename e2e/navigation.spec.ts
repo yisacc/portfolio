@@ -22,16 +22,12 @@ test('test', async ({ page }) => {
   await page.getByRole('link', { name: 'Contact' }).click();
   await page.getByText('Contact meI\'m always interested in hearing about new technologies, updates and j').click();
   await page.getByRole('link', { name: 'email me' }).click();
-  await page.getByText('Yisacc Aberham · Front-End Developer Linkedin Github Email© 2023 Yisacc Aberham.').click();
   await page.getByRole('link', { name: 'About' }).click();
   await page.getByRole('heading', { name: 'About Yisacc Aberham' }).click();
   await page.getByRole('heading', { name: 'Just the highlights' }).click();
   await page.getByText('I am a software engineer with 5 years of experience in the software industry. My').click();
   await page.getByText('Just the highlightsI am a software engineer with 5 years of experience in the so').click();
   await page.getByRole('img', { name: 'Screenshot of the dHealth signer app.' }).click();
-  const page4Promise = page.waitForEvent('popup');
-  await page.getByText('Yisacc Aberham · Front-End Developer Linkedin Github Email© 2023 Yisacc Aberham.').click();
-  const page4 = await page4Promise;
   const page5Promise = page.waitForEvent('popup');
   await page.getByRole('list', { name: 'links' }).getByRole('link', { name: 'Linkedin' }).click();
   const page5 = await page5Promise;
