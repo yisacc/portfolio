@@ -60,7 +60,7 @@ it("Adds correct src attribute", () => {
   expect(img.getAttribute("src")).toBe(signerAppPic);
 });
 
-it("should not fail any accessblity tests", async () => {
+it("should not fail any accessibility tests", async () => {
   const { container } = render(<ProjectItem {...project} />);
   const results = await axe(container);
   expect(results).toHaveNoViolations();

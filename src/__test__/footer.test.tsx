@@ -24,7 +24,7 @@ it("should render list of links", () => {
   expect(items.length).toBe(socialLinks.length);
 });
 
-it("should not fail any accessblity tests", async () => {
+it("should not fail any accessibility tests", async () => {
   const { container } = render(<Footer />);
   const results = await axe(container);
   expect(results).toHaveNoViolations();

@@ -13,7 +13,7 @@ it("has the correct title", () => {
   screen.getByText("Hi, my name is");
 });
 
-it("should not fail any accessblity tests", async () => {
+it("should not fail any accessibility tests", async () => {
   const { container } = render(<Introduction />);
   const results = await axe(container);
   expect(results).toHaveNoViolations();

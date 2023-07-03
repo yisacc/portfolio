@@ -20,7 +20,7 @@ it("should navigate accordingly", () => {
   );
 });
 
-it("should not fail any accessblity tests", async () => {
+it("should not fail any accessibility tests", async () => {
   const { container } = render(<Contact />);
   const results = await axe(container);
   expect(results).toHaveNoViolations();

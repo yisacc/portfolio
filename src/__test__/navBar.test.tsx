@@ -18,7 +18,7 @@ it('has an anchor tag with href="#contact"', () => {
   expect(screen.getByText("Contact")).toHaveAttribute("href", "#contact");
 });
 
-it("should not fail any accessblity tests", async () => {
+it("should not fail any accessibility tests", async () => {
   const { container } = render(<NavBar />);
   const results = await axe(container);
   expect(results).toHaveNoViolations();
