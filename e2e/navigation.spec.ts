@@ -2,8 +2,9 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
   await page.goto('/');
-  await page.getByText('Yisacc AberhamProjectsAboutContactLinkedinGithubResume').click();
-  await page.getByText('Hi, my name isYisacc Aberham.').click();
+  await page
+    .getByText("Yisacc AberhamProjectsAboutContactLinkedinGithubResume")
+    .click();
   await page.getByRole('heading', { name: 'I\'m a front-end developer.' }).click();
   await page.getByText('Passionate MERN stack developer specializing in React.js, Next.JS, Typescript, H').click();
   await page.getByText('Currently, I\'m working on personal startup( Hi-Trust Tutor) & I\'m front-end ment').click();
