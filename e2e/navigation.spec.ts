@@ -22,7 +22,16 @@ test('test', async ({ page }) => {
   await page.getByRole('link', { name: 'Contact' }).click();
   await page.getByText('Contact meI\'m always interested in hearing about new technologies, updates and j').click();
   await page.getByRole('link', { name: 'email me' }).click();
+  const page1Promise = page.waitForEvent("popup");
   await page.getByRole('link', { name: 'About' }).click();
+  await page.getByRole("link", { name: "Projects" }).click();
+  await page.getByRole("link", { name: "Contact" }).click();
+  const page2Promise = page.waitForEvent("popup");
+  await page
+    .getByRole("heading", { name: "Linkedin" })
+    .getByRole("link", { name: "Linkedin" })
+    .click();
+  const page1 = await page1Promise;
   await page.getByRole('heading', { name: 'About Yisacc Aberham' }).click();
   await page.getByRole('heading', { name: 'Just the highlights' }).click();
   await page.getByText('I am a software engineer with 5 years of experience in the software industry. My').click();
