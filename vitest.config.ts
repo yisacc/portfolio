@@ -28,7 +28,7 @@ export default defineConfig({
         "test/**",
         "vite.*.ts",
         "**/*.d.ts",
-        "**/*.config.*",
+        "**/*.config.*", 
         "**/snapshot-tests/**",
         "**/coverage/**",
         "test-results/**",
