@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
-  await page.goto("https://yisaccaberham.vercel.app/");
+  await page.goto("/");
   await page.getByRole("link", { name: "Yisacc Aberham" }).click();
   await page.getByRole("link", { name: "Projects" }).click();
   await page.getByRole("link", { name: "About" }).click();
-
+  await page.goto("/about");
   await page.getByRole("heading", { name: "About Yisacc Aberham" }).click();
   await page
     .getByRole("img", { name: "Screenshot of the dHealth signer app." })
@@ -15,6 +15,7 @@ test('test', async ({ page }) => {
       "I am a software engineer with 5 years of experience in the software industry. My"
     )
     .click();
+    await page.goto("/");
   await page.getByRole("heading", { name: "Just the highlights" }).click();
   await page
     .getByRole("heading", { name: "My favorite technologies include:" })
