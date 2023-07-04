@@ -15,6 +15,7 @@ test('test', async ({ page }) => {
       "I am a software engineer with 5 years of experience in the software industry. My"
     )
     .click();
+    await page.getByRole("link", { name: "Yisacc Aberham" }).click();
     await page.goto("/");
   await page.getByRole("heading", { name: "Just the highlights" }).click();
   await page
